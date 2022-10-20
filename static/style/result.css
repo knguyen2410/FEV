@@ -1,0 +1,79 @@
+:root {
+    --color1: #1c3461;
+    --color2: #f8cc5c;
+    --color3: #a9b4c8; /* color for subtitle */
+    --color4: #FEFEFE; /* color for more detail */
+    --color5: #6DCDAF;
+}
+
+
+@import url(https://fonts.googleapis.com/css?family=Varela+Round);
+ *, *:before, *:after {
+	 box-sizing: border-box;
+}
+body {
+	background: var(--color2);
+	font-family: "Varela Round", sans-serif;
+}
+.card {
+	background: var(--color4);
+	box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+	border-radius: 5px;
+	width: 60%;
+	padding: 20px;
+	text-align: center;
+	color: white;
+    display: block;
+    margin: auto;
+    margin-top: 50px;
+}
+
+.thongbao {
+    font-size: 30px;
+    text-align: center;
+    color: var(--color1);
+    font-weight: 900;
+}
+.title {
+	font-size: 28px;
+    color: var(--color1);
+    font-weight: 800;
+}
+ .card .icon {
+	 margin: 50px 0;
+}
+ .card .icon svg {
+	 width: 100px;
+	 height: 100px;
+}
+ .card .icon svg path {
+	 fill: #f6b352;
+}
+ .card .features ul {
+	 padding: 0;
+	 margin: 20px 0 50px 0;
+	 list-style-type: none;
+}
+.card .features ul li {
+	margin: 10px 0;
+	font-size: 25px;
+    color: var(--color1);
+}
+.card .features ul li span {
+	border-bottom: 2px dotted #f6b352;
+}
+ .card .btn {
+	display: block;
+	background: var(--color1);
+	color: white;
+	padding: 15px 20px;
+	margin: 20px 0;
+	border-radius: 5px;
+	box-shadow: rgba(0, 0, 0, 0.9);
+	transition: all 200ms ease-in-out;
+	text-decoration: none;
+}
+ .card .btn:hover {
+	 background: var(--color2);
+}
+ 

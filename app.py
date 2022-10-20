@@ -17,17 +17,15 @@ def form():
     return render_template("form.html")
 
 @app.route('/result',methods =["GET", "POST"])
-
 def result():
     output = request.form.to_dict()
     if (output["state"] != "NJ"):
-        return render_template("form.html", message = "This location is not currently supporting.")
+        return render_template("noresult.html", message = "Sorry! We are still working on this location. Please try again later")
     else:
         #access token
         headers_token = {
             'accept': 'application/json',
         }
-        print(config.api_key)
 
         data_token = {
             'grant_type': 'urn:ibm:params:oauth:grant-type:apikey',
@@ -47,12 +45,16 @@ def result():
         }
         data = {
             "race": output["Race"], 
-            "county": output["county"] 
+            "county": output["county"]
         }
 
         response = requests.post('https://us-east.functions.cloud.ibm.com/api/v1/namespaces/26095e4b-8f64-4b8f-b1b6-59b7376c4898/actions/vaccine-algo-api-1', params=params, json = data, headers=headers)
         response = dict(json.loads(response.text))
-        return render_template("form.html", response=response["response"]["result"])
+        response=response["response"]["result"]
+        if (response['provider'] == "Unavailable"):
+            return render_template("noresult.html", message="Sorry! You have not matched with any vaccine providers.")
+        else:           
+            return render_template("result.html", response=response)
 
 @app.route("/info")
 

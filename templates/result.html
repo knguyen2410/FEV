@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="../static/style/result.css" />
+
+    <title>Result</title>
+</head>
+<body>
+
+    <main>
+        <div class="card">
+            <div class="thongbao">
+                {%if response %}
+                    <p>You have been matched with {{response['provider']}} at {{response['county']}} county for the Monkeypox Vaccine !!!</p>
+                {%endif%}
+                
+            </div>
+            <div class="icon">
+                <img src="../static/style/images/clipart.png" alt="" width="300px">
+            </div><!--/icon-->
+            <div class="title">{{response['provider']}}</div>
+            <div class="features">
+              <ul>
+                <li>Address: {{response['address']}}</li>
+              </ul>
+            </div><!--/features-->
+          
+            <a href="http://maps.google.com/maps?q=210+Louise+Ave,+Nashville,+TN+37203" class="btn">Link to Map</a>
+        </div>
+    </main>
+</body>
+</html>

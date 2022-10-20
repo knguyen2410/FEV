@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="../static/style/result.css" />
+
+    <title>Result</title>
+</head>
+<body>
+
+    <main>
+        <div class="card">
+            {% if message %}
+                <p class="thongbao">{{message}}</p>
+            {% endif %}
+          
+            <div class="icon">
+                <img src="../static/style/images/clipart.png" alt="" width="300px">
+            </div><!--/icon-->
+        </div>
+    </main>
+</body>
+</html>
