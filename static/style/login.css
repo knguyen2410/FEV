@@ -1,0 +1,107 @@
+:root {
+    --color1: #1c3461;
+    --color2: #f8cc5c;
+    --color3: #a9b4c8; /* color for subtitle */
+    --color4: #FEFEFE; /* color for more detail */
+}
+
+button {
+    margin-top: 10px;
+}
+
+body {
+    margin: 1cm 2cm 0 2cm;
+    background-color: var(--color4);
+    font-family: raleway;
+}
+
+label {
+    color: var(--color1);
+    font-size: 25px;
+    font-weight: bolder;
+}
+p {
+    font-size: 22px;
+    font-weight: bold;
+    color: var(--color1);
+}
+p a {
+    text-decoration: none;
+    color: var(--color2);
+    font-weight: bolder;
+}
+
+header {
+    padding: 0 0 10px 0;
+    border-bottom: double;
+    border-width: 5px;
+    border-color: var(--color2);
+}
+*{
+    transition:all 0.2s ease-in-out;
+}
+.container {
+    clear: both;
+    overflow: auto;
+}
+.logo img{
+    float: left;
+}
+nav {
+    float: right;
+}
+header ul li {
+    display: inline-block; 
+}
+header ul a {
+    color: var(--color1);
+    text-align: center;
+    text-decoration: none;
+    font-size: 20px; 
+    font-family: raleway;
+    padding: 10px;
+    text-decoration: none;
+    border-radius: 10px;
+}
+header ul a:hover{
+    background-color: var(--color1);
+    color: var(--color4);
+}
+.active {
+    background-color: var(--color2);
+}
+
+form {
+    width: 14.5cm;
+    margin: auto;
+    display: block;
+    padding: 30px 20px 0 10px;
+}
+.form-group label {
+    float: left;
+    width: 150px;
+}
+.form-group {
+    height: 2cm;
+}
+.form-control {
+    width: 10cm;
+    height: 1cm;
+}
+.btn-primary {
+    margin: auto;
+    display: block;
+    width: 3cm;
+    height: 1cm;
+    font-family: raleway;
+    font-size: 22px;
+    font-weight: bold;
+    color: var(--color1);
+    background-color: var(--color2);
+    border: none;
+    border-radius: 5px;
+}
+.btn-primary:hover {
+    color: var(--color4);
+    background-color: var(--color1);
+}

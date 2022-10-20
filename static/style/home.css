@@ -1,0 +1,123 @@
+:root {
+    --color1: #1c3461;
+    --color2: #f8cc5c;
+    --color3: #a9b4c8; /* color for subtitle */
+    --color4: #FEFEFE; /* color for more detail */
+}
+
+header {
+    padding: 0 0 10px 0;
+    border-bottom: double;
+    border-width: 8px;
+    border-color: var(--color2);
+}
+
+body {
+    margin: 1cm 2cm 0 2cm;
+    background-color: var(--color4);
+}
+
+.title {
+    color: var(--color2);
+    margin: 15px 0 0 0;
+}
+
+.author {
+    margin: 0 0 15px 0;
+    font-size: 25px;
+}
+
+.description {
+    font-size: 22px;
+    color: var(--color3);
+    font-family: 'Times New Roman', Times, serif;
+}
+
+*{
+    transition:all 0.2s ease-in-out;
+}
+
+.container {
+    clear: both;
+    overflow: auto;
+}
+
+.logo img{
+    float: left;
+}
+nav {
+    float: right;
+}
+
+header ul li {
+    display: inline-block; 
+}
+
+header ul a {
+    color: var(--color1);
+    text-align: center;
+    text-decoration: none;
+    font-size: 20px; 
+    font-family: raleway;
+    padding: 10px;
+    text-decoration: none;
+    border-radius: 10px;
+}
+
+header ul a:hover{
+    background-color: var(--color1);
+    color: var(--color4);
+}
+
+.active {
+    background-color: var(--color2);
+}
+
+.textbyimage {
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+  
+.image {
+    flex-basis: 40%
+}
+
+h1, h2, h3, h4 {
+    font-family: raleway;
+    color: var(--color1);
+}
+
+h1 {
+    text-align: center;
+    font-size: 32px;
+}
+
+h2 {
+    font-size: 28px;
+}
+
+p, .moredetail {
+    font-size: 22px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: black;
+}
+.note {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 22px;
+    text-decoration: none;
+    font-style: italic;
+    color: var(--color3);
+}
+.note:hover {
+    color: var(--color2);
+}
+
+.hero-image {
+    height: 60%;
+    width: 100%;
+    background-size: cover;
+    position: relative;
+    background-position: center;
+    background-repeat: no-repeat;
+}

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="../static/style/home.css" />
+
+    <title>Home</title>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="{{url_for('home')}}"><img src="../static/style/images/logo.png" alt="logo" width="70" /> </a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a class="active" href="{{url_for('home')}}">Home</a></li>
+                    <li><a href="{{url_for('form')}}">Request Form</a></li>
+                    <li><a href="{{url_for('info')}}">Vaccine Info</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="landing">
+            <img class="hero-image" src="../static/style/images/background.png" alt="">
+            <div>
+                <h1>About VACCINE - Fairness & Equity</h1>
+            </div>
+            <ul>
+                <li><a href="#intro">About us</a></li>
+                <li><a href="{{url_for('form')}}">Request Form</a></li>
+            </ul>
+        </div>
+        
+    
+        <h2 id="intro">Introduction</h2>
+        <p>
+            “In New Jersey, about 48% of vaccine recipients were White, and only 3 percent were Black, even though about 15% of 
+            the state’s population is Black, according to state data.” <a class="note" href="https://www.nytimes.com/2021/01/31/nyregion/nyc-covid-vaccine-race.html">(New York Times, 2021)</a>
+        </p>
+        <p>
+            “White Americans are being vaccinated at rates of up to three times higher than black Americans, though Black 
+            Americans have suffered a much higher death rate from COVID-19 than White Americans.” <a class="note" href="https://www.washingtonpost.com/opinions/2021/02/01/racial-inequality-covid-vaccine/">(The Washington Post, 2021)</a>
+        </p>
+        <p>
+            However, a problem similar to the early rollout of COVID-19 Vaccine is happening again: bias in distribution.
+            <ul class="moredetail">
+                <li>In Colorado, while the White population only accounts for 45% of the cases, they take up to 73% in the vaccinated population <a class="note" href="https://cdphe.colorado.gov/diseases-a-to-z/monkeypox">(CDPHE, Colorado)</a></li>
+                <li>North Carolina: “And while 70% of cases are in Black men, Black North Carolinians are receiving less than a quarter of the vaccinations” <a class="note" href="https://www.ncdhhs.gov/media/17508/open">(NCDHHS, North Carolina)</a></li>
+                <li>And similar situations are happening in other states.</li>
+            </ul>
+        </p>
+
+        <hr>
+        <h2>Why do we have to tackle this problem?</h2>
+        <ul class="moredetail">
+            <li>The two examples of the bias in COVID-19 vaccine rollout in 2021 and the similar problem with Monkeypox vaccine distribution at the moment highlight the challenge in helping different groups of civilians (in terms of demographics, income status, etc.) gain equal access to a resource such as vaccine.</li>
+            <li>In the long term, not only can the bias in vaccine distribution cause a heavy loss of lives and and wealths among those from the underrepresented groups, but it can also have a significant impact on the local and global economy in many aspects as it has eliminated economic potentials that come from those who were affected. The effects of missing necessary vaccines on one’s health can potentially hinder that person’s ability to contribute to the economy.</li>
+        </ul>
+
+        <hr>
+        <h2>How can we solve the problem?</h2>
+        <ul class="moredetail">
+            <li>We aim to design an application that utilizes an algorithm from a published research paper which has been successfully tested both theoretically and experimentally. The main research that will be used is: <a class="note" href="https://arxiv.org/abs/2112.04169">Equity Promotion</a>.</li>
+            <li>By trying to match an incoming users with vaccine facilities near them in the “fairest” way possible, the algorithm can help different groups of demographics receive a fair share of vaccines proportional to a certain preset goal. </li>
+            <li>We also apply statistical methods on real time data from official websites to make reliable estimation for some inputs for the algorithm such as the expected users that will need to be served or the expected number of vaccines that will be administered.</li>
+            <li>Starting with Monkeypox (because it is on the rise), we can scale our product to support other vaccines such as COVID-19, Flu, etc.</li>
+        </ul>
+
+        <hr>
+        <h2>Project Members</h2>
+    </main>
+</body>
+</html>
