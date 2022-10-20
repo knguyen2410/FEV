@@ -1,9 +1,6 @@
 from flask import Flask, render_template,request
 import requests
 import json
-from ibm_cloud_sdk_core.authenticators import IAMAuthenticator
-# from ibm_platform_services.iam_identity_v1 import *
-from ibm_platform_services import IamIdentityV1
 import config
 
 app = Flask(__name__)
