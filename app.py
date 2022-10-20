@@ -4,6 +4,7 @@ import json
 from ibm_cloud_sdk_core.authenticators import IAMAuthenticator
 # from ibm_platform_services.iam_identity_v1 import *
 from ibm_platform_services import IamIdentityV1
+import config
 
 app = Flask(__name__)
 
@@ -26,10 +27,11 @@ def result():
         headers_token = {
             'accept': 'application/json',
         }
+        print(config.api_key)
 
         data_token = {
             'grant_type': 'urn:ibm:params:oauth:grant-type:apikey',
-            'apikey': 'zC1_2chUco43B7fdCEw1agYntA62d3JE-dEdzW5RNo0Q',
+            'apikey': config.api_key
         }
 
         response_token = requests.post('https://iam.cloud.ibm.com/identity/token', headers=headers_token, data=data_token)
@@ -44,8 +46,8 @@ def result():
             'blocking': 'true',
         }
         data = {
-            "race": output["Race"], #get from front end
-            "county": output["county"] #get from front end
+            "race": output["Race"], 
+            "county": output["county"] 
         }
 
         response = requests.post('https://us-east.functions.cloud.ibm.com/api/v1/namespaces/26095e4b-8f64-4b8f-b1b6-59b7376c4898/actions/vaccine-algo-api-1', params=params, json = data, headers=headers)
@@ -59,6 +61,6 @@ def info():
 
 
 if __name__=="__main__":
-    app.run(debug=True, port=5001)
+    app.run(debug=True)
 
 
