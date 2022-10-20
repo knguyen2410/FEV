@@ -51,10 +51,16 @@ def result():
         response = requests.post('https://us-east.functions.cloud.ibm.com/api/v1/namespaces/26095e4b-8f64-4b8f-b1b6-59b7376c4898/actions/vaccine-algo-api-1', params=params, json = data, headers=headers)
         response = dict(json.loads(response.text))
         response=response["response"]["result"]
+        address = response["address"]
+        url="http://maps.google.com/maps?q="
+        for i in address.split():
+            url = url + "+" +i
+        
+        print(url)
         if (response['provider'] == "Unavailable"):
             return render_template("noresult.html", message="Sorry! You have not matched with any vaccine providers.")
         else:           
-            return render_template("result.html", response=response)
+            return render_template("result.html", response=response, url=url)
 
 @app.route("/info")
 
